@@ -14,6 +14,7 @@ export class UpdateUserComponent implements OnInit {
   userId: string;
   oldUser: any;
   profileForm: FormGroup;
+  isLoaded:boolean = false;
   constructor(public toastr: ToastrManager,private router: Router,private activatedRoute: ActivatedRoute,private userService:UserService) { }
 
   ngOnInit() {
@@ -30,9 +31,10 @@ export class UpdateUserComponent implements OnInit {
   }
   initialization() {
     this.userService.getUser(this.userId).subscribe(data => {
-      this.user = data[0];
-      this.oldUser = data[0];
-
+      console.log(data);
+      this.user = data;
+      this.oldUser = data;
+      this.isLoaded = true;
     });
   }
 
@@ -43,9 +45,9 @@ export class UpdateUserComponent implements OnInit {
     else
       this.user.name = this.oldUser.name;
     if (this.profileForm.value.emailId)
-      this.user.emailId = this.profileForm.value.emailId;
+      this.user.email = this.profileForm.value.emailId;
     else
-      this.user.emailId = this.oldUser.emailId;
+      this.user.email = this.oldUser.email;
     if (this.profileForm.value.age)
       this.user.age = this.profileForm.value.age;
     else
@@ -53,6 +55,7 @@ export class UpdateUserComponent implements OnInit {
 
     this.userService.updateUser(this.user).subscribe(data => {
       this.toastr.successToastr("User updated Successfully!!!","Success");
+      this.router.navigateByUrl('users');
     });
 
   }

@@ -31,7 +31,7 @@
 
 .card-body-top {
     height: auto;
-    min-height: 200px;
+    min-height: 80px;
 }
 
 .card-unique{
@@ -46,7 +46,7 @@
 .gadget-name{
     color: white;
     font: 1.3rem 'Gruppo', cursive;
-    text-transform: capitalize;
+ 
 }
 .blog-name{
     font-family:'Exo 2', sans-serif;

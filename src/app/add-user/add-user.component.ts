@@ -34,12 +34,13 @@ export class AddUserComponent implements OnInit {
   register() {
     
     this.user.name = this.registrationForm.value.name;
-    this.user.emailId = this.registrationForm.value.emailId;
+    this.user.email = this.registrationForm.value.emailId;
     this.user.age = this.registrationForm.value.age;
     console.log(this.user);
     this.userService.addUser(this.user).subscribe(data=>{
       console.log(data);
     })
     this.toastr.successToastr('User Added Successfully', 'Success!');
+    this.router.navigateByUrl('users');
   }
 }

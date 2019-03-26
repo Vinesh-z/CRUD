@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class UserListComponent implements OnInit {
 
   allUsers: User[] =[];
-
+  isLoaded:boolean = false;
   constructor(private userService: UserService,private router: Router) { }
 
   ngOnInit() {
@@ -22,11 +22,12 @@ export class UserListComponent implements OnInit {
     this.userService.getAllUsers().subscribe(data=>{
       console.log(data);
       this.allUsers = data;
+      this.isLoaded= true;
     })
   }
-
   btnClick(value){
-    this.router.navigate(['unique',value.emailId]);
+    console.log(value);
+    this.router.navigate(['unique',value.email]);
   }
 
 }

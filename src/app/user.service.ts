@@ -13,26 +13,27 @@ const GET_HEADERS = {
   providedIn: 'root'
 })
 export class UserService {
-  url: 'http://localhost:8081'
+  url:string =  'http://localhost:8081'
   constructor(private http: HttpClient) { }
 
   addUser(newUser: User): Observable<any> {
-    return this.http.post<any>(this.url + `/user/`, newUser, GET_HEADERS);
+    return this.http.post<any>(this.url + `/user/addNewUser`, newUser, GET_HEADERS);
   }
 
   getUser(emailId: string): Observable<any> {
-    return this.http.get<any>(this.url + '/user/' + emailId);
+    return this.http.get<any>(this.url + '/user/getUser/' + emailId);
   }
 
   getAllUsers(): Observable<any> {
-    return this.http.get<any>(this.url + '/user/');
+    console.log(this.url);
+    return this.http.get<any>(this.url + '/user/getUsers');
   }
 
-  deleteUser(userId: string): Observable<any> {
-    return this.http.delete<any>(this.url + '/user/' + userId);
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete<any>(this.url + '/user/deleteUser/' + userId);
   }
   updateUser(user: User): Observable<any> {
-
-    return this.http.put<any>(this.url + `/user/`, user, GET_HEADERS);
+    console.log(user);
+    return this.http.put<any>(this.url + `/user/updateUser`, user, GET_HEADERS);
   }
 }
