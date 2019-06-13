@@ -13,7 +13,7 @@ const GET_HEADERS = {
   providedIn: 'root'
 })
 export class UserService {
-  url:string =  'http://104.198.242.193:8081'
+  url:string =  'http://35.184.94.107:8081';
   constructor(private http: HttpClient) { }
 
   addUser(newUser: User): Observable<any> {

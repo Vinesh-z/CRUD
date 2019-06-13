@@ -694,7 +694,7 @@ var GET_HEADERS = {
 var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
-        this.url = 'http://104.198.242.193:8081';
+        this.url = 'http://35.184.94.107:8081';
     }
     UserService.prototype.addUser = function (newUser) {
         return this.http.post(this.url + "/user/addNewUser", newUser, GET_HEADERS);
