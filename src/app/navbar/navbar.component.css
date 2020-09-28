@@ -1,4 +1,8 @@
-.nav-link, .navbar-brand{font: 1.3rem 'Gruppo', cursive;}
-.navbar-brand{
+.nav-link,
+.navbar-brand {
+    font: 1.3rem 'Aldrich', cursive;
+}
+
+.navbar-brand {
     font-size: 30px;
 }
