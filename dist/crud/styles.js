@@ -678,10 +678,10 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\M1049188\Desktop\crud\CRUD\src\styles.css */"./src/styles.css");
-__webpack_require__(/*! C:\Users\M1049188\Desktop\crud\CRUD\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! C:\Users\M1049188\Desktop\crud\CRUD\node_modules\bootstrap\dist\css\bootstrap-grid.min.css */"./node_modules/bootstrap/dist/css/bootstrap-grid.min.css");
-module.exports = __webpack_require__(/*! C:\Users\M1049188\Desktop\crud\CRUD\node_modules\bootstrap\dist\css\bootstrap-reboot.min.css */"./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css");
+__webpack_require__(/*! E:\Docker\Crud-Frontend\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! E:\Docker\Crud-Frontend\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! E:\Docker\Crud-Frontend\node_modules\bootstrap\dist\css\bootstrap-grid.min.css */"./node_modules/bootstrap/dist/css/bootstrap-grid.min.css");
+module.exports = __webpack_require__(/*! E:\Docker\Crud-Frontend\node_modules\bootstrap\dist\css\bootstrap-reboot.min.css */"./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css");
 
 
 /***/ })
